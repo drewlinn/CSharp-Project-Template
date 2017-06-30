@@ -1,0 +1,27 @@
+  <h1>Edit Object</h1>
+  <hr />
+  <h2>Edit Object: @Model.GetName()</h2>
+  <form action="/band/edit/@Model.GetId()" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <input name="band-id" type="hidden" value="@Model.GetId()">
+    <label for="name">Object Name</label>
+    <input id="name" name="name" type="text" value="@Model.GetName()">
+    <label for="property">Property</label>
+    <input id="property" name="property" type="text" value="@Model.GetProperty()">
+    <button type="submit">Submit</button>
+  </form>
+  <h4><a href="/">Return home</a></h4>
+
+  <h1>Edit Category</h1>
+  <hr />
+  <h2>Edit Category: @Model.GetProperty()</h2>
+  <form action="/category/edit/@Model.GetId()" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <input name="category-id" type="hidden" value="@Model.GetId()">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" value="@Model.GetName()">
+    <label for="property">Property</label>
+    <input id="property" name="property" type="text" value="@Model.GetProperty()">
+    <button type="submit">Submit</button>
+  </form>
+  <h4><a href="/">Return home</a></h4>

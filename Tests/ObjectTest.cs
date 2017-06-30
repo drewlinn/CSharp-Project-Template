@@ -145,7 +145,7 @@ namespace ProjectName
     public void Dispose()
     {
       Object.DeleteAll();
-
+      Category.DeleteAll();
     }
   }
 }

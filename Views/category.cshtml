@@ -1,0 +1,18 @@
+<h2>@Model["category"].GetName(). </h2>
+<h4>Property: @Model["category"].GetProperty()</h4>
+@if(@Model["objects"].Count == 0)
+{
+  <p>There are no objects</p>
+}
+else
+{
+  <ol>
+    @foreach (var object in @Model["objects"])
+    {
+      <li><a href="/object/@object.GetId()">@object.GetName()</li>
+    }
+  </ol>
+}
+<p><a href="/categories">View all categories</a></p>
+<p><a href="/category/new">Add a new category</a></p>
+<p><a href="/">Return home</a></p>

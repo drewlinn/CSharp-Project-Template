@@ -1,0 +1,10 @@
+<h2>This is @Model["object"].GetName()</h2>
+<h3>Genre: @Model["object"].GetProperty()</h3>
+
+<h3>Categories:</h3>   @foreach (var category in @Model["categories"])
+  {
+    <li><a href="/category/@category.GetId()">@category.GetName()</li>
+  }
+<p><a href="/objects">View all objects</a></p>
+<p><a href="/object/new">Add another object</a></p>
+<p><a href="/">Return Home</a></p>
